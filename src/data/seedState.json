@@ -1,0 +1,17 @@
+{
+  "items": {
+    "wyze-cam-v4-var-white": 1,
+    "wyze-cam-pan-v3-var-white": 2,
+    "wyze-sense-motion-sensor": 2,
+    "wyze-sense-hub": 1,
+    "wyze-microsd-card": 2,
+    "cam-unlimited": 1
+  },
+  "activeVariants": {
+    "wyze-cam-v4": "var-white",
+    "wyze-cam-pan-v3": "var-white",
+    "wyze-cam-floodlight-v2": "var-white",
+    "wyze-battery-cam-pro": "var-white"
+  },
+  "activeStep": 1
+}
