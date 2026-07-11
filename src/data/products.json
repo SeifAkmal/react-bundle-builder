@@ -7,7 +7,7 @@
     "price": 27.98,
     "compareAtPrice": 35.98,
     "badge": "Save 22%",
-    "imageUrl": "/images/wyze-cam-v4.png",
+    "imageUrl": "/images/Wyze_Cam_V4.png",
     "learnMoreLink": "#",
     "variants": [
       { "id": "var-white", "name": "White", "swatchUrl": "#ffffff" },
@@ -23,7 +23,7 @@
     "price": 34.98,
     "compareAtPrice": 39.98,
     "badge": "Save 12%",
-    "imageUrl": "/images/wyze-cam-pan-v3.png",
+    "imageUrl": "/images/Wyze_Cam_Pan_ v3.png",
     "learnMoreLink": "#",
     "variants": [
       { "id": "var-white", "name": "White", "swatchUrl": "#ffffff" },
@@ -38,7 +38,7 @@
     "price": 69.98,
     "compareAtPrice": 89.98,
     "badge": "Save 22%",
-    "imageUrl": "/images/wyze-cam-floodlight-v2.png",
+    "imageUrl": "/images/Wyze_Cam_Floodlight_v2.png",
     "learnMoreLink": "#",
     "variants": [
       { "id": "var-white", "name": "White", "swatchUrl": "#ffffff" },
@@ -51,7 +51,7 @@
     "title": "Wyze Duo Cam Doorbell",
     "description": "Two cameras. Two views. Double the porch protection.",
     "price": 69.98,
-    "imageUrl": "/images/wyze-duo-cam-doorbell.png",
+    "imageUrl": "/images/Wyze_Duo_Cam_Doorbell.png",
     "learnMoreLink": "#"
   },
   {
@@ -60,7 +60,7 @@
     "title": "Wyze Battery Cam Pro",
     "description": "Protect anywhere. See everything in 2.5K HDR. No power outlet or electrician needed.",
     "price": 89.98,
-    "imageUrl": "/images/wyze-battery-cam-pro.png",
+    "imageUrl": "/images/Wyze_Battery_Cam_Pro.png",
     "learnMoreLink": "#",
     "variants": [
       { "id": "var-white", "name": "White", "swatchUrl": "#ffffff" },
@@ -72,7 +72,7 @@
     "categoryId": "sensors",
     "title": "Wyze Sense Motion Sensor",
     "price": 29.99,
-    "imageUrl": "/images/wyze-sense-motion-sensor.png"
+    "imageUrl": "https://placehold.co/200x200/f8f9fa/1a202c?text=Motion+Sensor"
   },
   {
     "id": "wyze-sense-hub",
@@ -80,14 +80,14 @@
     "title": "Wyze Sense Hub (Required)",
     "price": 0,
     "compareAtPrice": 29.99,
-    "imageUrl": "/images/wyze-sense-hub.png"
+    "imageUrl": "https://placehold.co/200x200/f8f9fa/1a202c?text=Sense+Hub"
   },
   {
     "id": "wyze-microsd-card",
     "categoryId": "accessories",
     "title": "Wyze MicroSD Card (256GB)",
     "price": 20.98,
-    "imageUrl": "/images/wyze-microsd-card.png"
+    "imageUrl": "https://placehold.co/200x200/f8f9fa/1a202c?text=MicroSD+Card"
   },
   {
     "id": "cam-unlimited",
@@ -95,6 +95,6 @@
     "title": "Cam Unlimited",
     "price": 9.99,
     "compareAtPrice": 12.99,
-    "imageUrl": "/images/cam-unlimited.png"
+    "imageUrl": "https://placehold.co/200x200/f8f9fa/1a202c?text=Cam+Unlimited"
   }
 ]
