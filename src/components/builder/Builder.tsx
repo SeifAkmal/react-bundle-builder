@@ -45,7 +45,7 @@ export function Builder() {
   };
 
   return (
-    <div className="max-w-2xl mx-auto w-full">
+    <div className="w-full">
       <AccordionStep
         stepNumber={1}
         title="Choose your cameras"

@@ -10,6 +10,10 @@
   --color-text-muted: #718096;
 }
 
+html {
+  font-size: 17px; /* Increases global rem size slightly from default 16px */
+}
+
 body {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   background-color: var(--color-background-alt);

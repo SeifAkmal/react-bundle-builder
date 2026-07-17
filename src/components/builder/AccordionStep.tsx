@@ -25,7 +25,7 @@ export function AccordionStep({
   children: React.ReactNode;
 }) {
   return (
-    <div className={`border-b border-gray-200 last:border-0 ${isActive ? 'bg-[#f8f9fe]' : 'bg-white'} transition-colors duration-300`}>
+    <div className={`border-b border-gray-200 last:border-0 rounded-2xl ${isActive ? 'bg-[#EDF4FF]' : 'bg-white'} transition-colors duration-300`}>
       {/* Header Area */}
       <div className="pt-6 pb-4 px-2 sm:px-4">
         <div className="text-[10px] tracking-wider text-gray-400 font-bold mb-2 uppercase">
@@ -48,12 +48,12 @@ export function AccordionStep({
           {/* Right side of header */}
           <div className="flex items-center">
              {isActive ? (
-                <span className="text-sm font-semibold text-[#4f46e5] flex items-center gap-1">
+                <span className="text-sm font-semibold text-[#4E2FD2] flex items-center gap-1">
                    {selectedCount > 0 ? `${selectedCount} selected` : ''} 
                    <span className="text-[10px] ml-1">▲</span>
                 </span>
              ) : (
-                <span className="text-[#4f46e5] font-bold text-sm">▼</span>
+                <span className="text-[#4E2FD2] font-bold text-sm">▼</span>
              )}
           </div>
         </button>
@@ -62,7 +62,7 @@ export function AccordionStep({
       {/* Content Area */}
       {isActive && (
         <div className="pb-8 px-2 sm:px-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-2">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4 mt-4">
             {children}
           </div>
           
