@@ -17,7 +17,7 @@ const TruckIcon = <img src="/review-icons/truck-badge.svg" alt="Fast Shipping" c
 const RosetteIcon = <img src="/review-icons/100%-badge.svg" alt="100% Satisfaction Guaranteed" className="w-24 h-24 object-contain" />;
 
 export function ReviewPanel() {
-  const { state, dispatch } = useBundle();
+  const { state, dispatch, saveForLater } = useBundle();
 
   const getCartItemDetails = (cartKey: string) => {
     let product = products.find(p => p.id === cartKey);
@@ -105,6 +105,7 @@ export function ReviewPanel() {
                   <div className="flex-1 flex justify-between items-center gap-2">
                     <span className="font-medium text-gray-900 text-sm leading-tight">
                       {item.product.title}
+                      {item.variant && <span className="text-gray-500 font-normal"> ({item.variant.name})</span>}
                     </span>
                     
                     <div className="shrink-0 scale-90 origin-right">
@@ -174,7 +175,10 @@ export function ReviewPanel() {
         <Button variant="primary" className="w-full py-4 text-base font-bold shadow-md">
           Checkout
         </Button>
-        <button className="mt-4 text-sm text-gray-600 underline hover:text-gray-900 transition-colors">
+        <button 
+          onClick={saveForLater}
+          className="mt-4 text-sm text-gray-600 underline hover:text-gray-900 transition-colors"
+        >
           Save my system for later
         </button>
       </div>

@@ -30,11 +30,15 @@ export function Builder() {
     let count = 0;
     catProducts.forEach(p => {
       if (p.variants) {
-        p.variants.forEach(v => {
-          count += state.items[`${p.id}-${v.id}`] || 0;
-        });
+        // If ANY color is selected, count this product as 1 distinct choice
+        const hasAnyVariantSelected = p.variants.some(v => state.items[`${p.id}-${v.id}`] !== undefined);
+        if (hasAnyVariantSelected) {
+          count += 1;
+        }
       } else {
-        count += state.items[p.id] || 0;
+        if (state.items[p.id] !== undefined) {
+           count += 1;
+        }
       }
     });
     return count;
