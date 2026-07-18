@@ -1,32 +1,47 @@
-# React + TypeScript + Vite
+# Security Bundle Builder
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+## About the Project
+This project is an intelligent, multi-step bundle builder for a home security e-commerce store. It allows users to build and customize their security system across sequential steps (Cameras, Plans, Sensors, Accessories) using an accordion-style layout. It also features a highly responsive, sticky Review Panel that displays added products, variants, total costs, and live savings.
 
-Currently, two official plugins are available:
+## Technologies Used
+- **React (v19)** - For building the user interface.
+- **TypeScript** - For type safety and a better developer experience.
+- **Tailwind CSS** - For fast, utility-first styling and robust responsive design.
+- **Vite** - For a fast frontend build tool and development server.
+- **Context API & useReducer** - For global state management.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Getting Started
+To run the project locally, follow these simple steps:
 
-## React Compiler
+1. Install the dependencies:
+   ```bash
+   npm install
+   ```
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+2. Start the development server:
+   ```bash
+   npm run dev
+   ```
 
-## Expanding the Oxlint configuration
+3. Open the link provided in your terminal (usually `http://localhost:5173`) in your browser.
 
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
+## Brief Structure
+The project is organized cleanly to ensure easy maintenance and scalability:
 
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
+```text
+src/
+├── components/
+│   ├── builder/        # Main builder components (Builder, ReviewPanel, ProductCard, Accordion)
+│   └── ui/             # Reusable UI elements (Button, Stepper, Badge, VariantSelector)
+├── context/            # Context API setup for global state management
+├── hooks/              # Custom hooks (e.g., useBundle for easy data access)
+├── types/              # TypeScript interfaces and type definitions
+├── data/               # Mock JSON data for products
+├── App.tsx             # Main layout and application entry point
+└── index.css           # Global styles and CSS variables
 ```
 
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+## Key Decisions
+- **State Management:** Instead of using heavy external libraries like Redux, the app uses React's native `Context API` combined with `useReducer`. This provides a lightweight, scalable, and easy-to-follow way to manage cart items, selected variants, and the active builder step.
+- **Responsive Design:** The layout is highly optimized for all screen sizes. On desktop screens, the builder and review panel sit side-by-side or stacked cleanly.
+- **Global Font Scaling:** The base `html` font size was increased to `17px`. Since Tailwind heavily uses `rem` units, this seamlessly scales up the entire UI (fonts, margins, paddings) proportionately without having to adjust individual component classes.

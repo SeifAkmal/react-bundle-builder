@@ -8,17 +8,17 @@ import { VariantSelector } from '../ui/VariantSelector';
 export function ProductCard({ product }: { product: Product }) {
   const { state, dispatch } = useBundle();
 
-  // 1. Determine active variant
+
   const hasVariants = product.variants && product.variants.length > 0;
   const activeVariantId = hasVariants
     ? state.activeVariants[product.id] || product.variants![0].id
     : undefined;
 
-  // 2. Determine cart key and quantity
+
   const cartKey = hasVariants ? `${product.id}-${activeVariantId}` : product.id;
   const quantity = state.items[cartKey] || 0;
 
-  // 3. Handlers
+
   const handleVariantClick = (variantId: string) => {
     dispatch({
       type: 'SET_ACTIVE_VARIANT',
@@ -40,7 +40,7 @@ export function ProductCard({ product }: { product: Product }) {
     });
   };
 
-  // Styling based on selection
+
   const isSelected = quantity > 0;
   const cardBorder = isSelected 
     ? 'border-[#4E2FD2] bg-white' 
@@ -48,14 +48,14 @@ export function ProductCard({ product }: { product: Product }) {
 
   return (
     <div className={`relative flex flex-col p-4 rounded-xl border-2 transition-all duration-200 h-full ${cardBorder}`}>
-      {/* Badge Top Left */}
+
       {product.badge && (
         <div className="absolute top-4 left-4 z-10">
           <Badge text={product.badge} />
         </div>
       )}
 
-      {/* Top: Image */}
+
       <div className={`w-full flex items-center justify-center mb-3 ${product.badge ? 'pt-8' : ''}`}>
         <img 
           src={product.imageUrl} 
@@ -64,7 +64,7 @@ export function ProductCard({ product }: { product: Product }) {
         />
       </div>
 
-      {/* Info */}
+
       <div className="flex flex-col flex-1">
         <h3 className="font-bold text-gray-900 text-[15px] mb-1 leading-tight">{product.title}</h3>
         
@@ -75,7 +75,7 @@ export function ProductCard({ product }: { product: Product }) {
           </a>
         </p>
 
-        {/* Variants */}
+
         {hasVariants && (
           <div className="flex flex-wrap gap-2 mb-3 mt-auto">
             {product.variants!.map((variant) => (
@@ -90,7 +90,7 @@ export function ProductCard({ product }: { product: Product }) {
           </div>
         )}
         
-        {/* Bottom Area: Stepper & Price */}
+
         <div className="flex items-center justify-between gap-1 mt-auto flex-wrap">
           <Stepper 
             quantity={quantity} 

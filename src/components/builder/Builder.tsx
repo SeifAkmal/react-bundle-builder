@@ -4,10 +4,8 @@ import { AccordionStep } from './AccordionStep';
 import { ProductCard } from './ProductCard';
 import type { Product } from '../../types';
 
-// Cast imported JSON to Product[]
 const products = productsData as Product[];
 
-// --- Icons ---
 const CameraIcon = <img src="/category-icons/cameras-icon.svg" alt="Cameras" className="w-full h-full object-contain" />;
 const ShieldIcon = <img src="/category-icons/shield-icon.svg" alt="Plan" className="w-full h-full object-contain" />;
 const SensorIcon = <img src="/category-icons/sensor-icon.svg" alt="Sensors" className="w-full h-full object-contain" />;
@@ -24,7 +22,6 @@ export function Builder() {
     return products.filter(p => p.categoryId === categoryId);
   };
 
-  // Helper to count selected items in a specific category
   const getCategorySelectedCount = (categoryId: string) => {
     const catProducts = getProductsByCategory(categoryId);
     let count = 0;

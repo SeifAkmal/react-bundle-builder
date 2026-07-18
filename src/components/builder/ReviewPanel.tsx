@@ -33,7 +33,7 @@ export function ReviewPanel() {
     return { product, variant };
   };
 
-  // Build grouped items
+
   const allCartItems = Object.entries(state.items)
     .filter(([_, qty]) => qty > 0)
     .map(([key, qty]) => {
@@ -49,7 +49,7 @@ export function ReviewPanel() {
     .filter(cat => cat.items.length > 0);
 
 
-  // Calculate totals
+
   let currentTotal = 0;
   let originalTotal = 0;
 
@@ -63,7 +63,7 @@ export function ReviewPanel() {
     }
   });
 
-  // Fast Shipping
+
   originalTotal += 5.99;
   const savings = originalTotal - currentTotal;
 
@@ -71,9 +71,9 @@ export function ReviewPanel() {
     <div className="bg-[#f4f5f9] rounded-xl py-[35px] px-4 sm:px-[61px]">
       <div className="flex flex-col lg:flex-row gap-8 lg:gap-16 items-start">
         
-        {/* Left Column (Items) */}
+
         <div className="flex-1">
-          {/* Header */}
+
           <div className="mb-8 border-b border-gray-200 pb-4">
             <h2 className="text-2xl font-bold text-gray-900 mb-2">
               Your security system
@@ -83,7 +83,7 @@ export function ReviewPanel() {
             </p>
           </div>
 
-          {/* Categories & Items */}
+
           <div className="space-y-6">
             {groupedItems.map(category => (
               <div key={category.id}>
@@ -93,7 +93,7 @@ export function ReviewPanel() {
                 <div className="space-y-4">
                   {category.items.map(item => (
                     <div key={item.key} className="flex items-center gap-4">
-                      {/* Product Image */}
+
                       <div className="w-12 h-12 bg-white rounded shadow-sm border border-gray-100 flex items-center justify-center p-1 shrink-0">
                         <img 
                           src={item.product.imageUrl} 
@@ -102,7 +102,7 @@ export function ReviewPanel() {
                         />
                       </div>
                       
-                      {/* Title & Stepper */}
+
                       <div className="flex-1 flex flex-col sm:flex-row sm:justify-between items-start sm:items-center gap-2">
                         <span className="font-medium text-gray-900 text-sm leading-tight">
                           {item.product.title}
@@ -118,7 +118,7 @@ export function ReviewPanel() {
                         </div>
                       </div>
 
-                      {/* Pricing */}
+
                       <div className="text-right shrink-0 w-16">
                         {item.product.compareAtPrice && (
                           <div className="text-xs text-gray-400 line-through">
@@ -137,7 +137,7 @@ export function ReviewPanel() {
             ))}
           </div>
 
-          {/* Shipping Row */}
+
           <div className="flex items-center justify-between py-5 border-b border-gray-200 lg:border-none">
             <div className="flex items-center gap-3">
               {TruckIcon}
@@ -150,12 +150,12 @@ export function ReviewPanel() {
           </div>
         </div>
 
-        {/* Right Column (Totals & Checkout) */}
+
         <div className="flex-1 w-full flex flex-col justify-center">
-          {/* Mobile Footer Totals & Returns */}
+
           <div className="flex sm:hidden justify-between items-center mb-6">
             <div className="shrink-0 w-16 h-16">
-              {/* Scale down the icon slightly for mobile to fit better next to totals */}
+
               <img src="/review-icons/100%-badge.svg" alt="100% Satisfaction Guaranteed" className="w-full h-full object-contain" />
             </div>
             <div className="text-right flex flex-col items-end gap-1">
@@ -169,9 +169,9 @@ export function ReviewPanel() {
             </div>
           </div>
 
-          {/* Desktop Footer Totals & Returns */}
+
           <div className="hidden sm:block">
-            {/* 30-Day Returns Block */}
+
             <div className="flex items-center gap-4 mb-6">
               <div className="shrink-0">
                 {RosetteIcon}
@@ -184,7 +184,7 @@ export function ReviewPanel() {
               </div>
             </div>
 
-            {/* Footer Totals */}
+
             <div className="flex justify-between items-center mb-6">
               <div>
                 <div className="bg-[#4E2FD2] text-white text-[11px] px-3 py-1 rounded-full font-semibold tracking-wide inline-block">
@@ -200,7 +200,7 @@ export function ReviewPanel() {
             </div>
           </div>
 
-          {/* Checkout Section */}
+
           <div className="text-center">
             {savings > 0 && (
               <p className="text-[13px] font-bold text-teal-600 mb-4">
