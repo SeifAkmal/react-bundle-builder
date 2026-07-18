@@ -14,7 +14,7 @@ const categoriesOrder = [
 ];
 
 const TruckIcon = <img src="/review-icons/truck-badge.svg" alt="Fast Shipping" className="w-8 h-8 object-contain" />;
-const RosetteIcon = <img src="/review-icons/100%-badge.svg" alt="100% Satisfaction Guaranteed" className="w-24 h-24 object-contain" />;
+const RosetteIcon = <img src="/review-icons/100-percent-badge.svg" alt="100% Satisfaction Guaranteed" className="w-24 h-24 object-contain" />;
 
 export function ReviewPanel() {
   const { state, dispatch, saveForLater } = useBundle();
@@ -156,7 +156,7 @@ export function ReviewPanel() {
           <div className="flex sm:hidden justify-between items-center mb-6">
             <div className="shrink-0 w-16 h-16">
 
-              <img src="/review-icons/100%-badge.svg" alt="100% Satisfaction Guaranteed" className="w-full h-full object-contain" />
+              <img src="/review-icons/100-percent-badge.svg" alt="100% Satisfaction Guaranteed" className="w-full h-full object-contain" />
             </div>
             <div className="text-right flex flex-col items-end gap-1">
               <div className="bg-[#4E2FD2] text-white text-[10px] px-2 py-0.5 rounded-full font-semibold tracking-wide inline-block">
