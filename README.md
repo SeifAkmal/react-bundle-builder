@@ -1,7 +1,9 @@
 # Security Bundle Builder
 
 ## About the Project
-This project is an intelligent, multi-step bundle builder for a home security e-commerce store. It allows users to build and customize their security system across sequential steps (Cameras, Plans, Sensors, Accessories) using an accordion-style layout. It also features a highly responsive, sticky Review Panel that displays added products, variants, total costs, and live savings.
+This project is a responsive multi-step bundle builder for a home security e-commerce store. It allows users to configure and customize their security system across four sequential steps: Cameras, Plans, Sensors, and Accessories.
+
+The application features synchronized state management, live pricing updates, product variant selection, quantity management, a sticky review panel, and client-side persistence using localStorage.
 
 ## Technologies Used
 - **React (v19)** - For building the user interface.
